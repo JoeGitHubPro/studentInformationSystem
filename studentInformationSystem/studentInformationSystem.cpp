@@ -193,31 +193,47 @@ void deleteStudent() {
 
 // Main function
 int main() {
-
-	cout << "What opereation nedded" << endl;
-	cout << "1-Add Student\n2-Display Student\n3-Show All Students\n4-Delete Student" << endl;
-
-	int input;
-	cin >> input;
-
-	switch (input)
+	bool flag;
+	do
 	{
-	case 1:
-		addStudent();
-		break;
-	case 2:
-		displayStudent();
-		break;
-	case 3:
-		showAllStudents();
-		break;
-	case 4:
-		deleteStudent();
-		break;
+		cout << "What opereation nedded" << endl;
+		cout << "1-Add Student\n2-Display Student\n3-Show All Students\n4-Delete Student" << endl;
 
-	default:
-		break;
-	}
+		int input;
+		cin >> input;
+
+		switch (input)
+		{
+		case 1:
+			addStudent();
+			break;
+		case 2:
+			displayStudent();
+			break;
+		case 3:
+			showAllStudents();
+			break;
+		case 4:
+			deleteStudent();
+			break;
+
+		default:
+			break;
+		}
+		
+		cout << "do you want to do other opereation\n1-Yes\n2-No" << endl;
+		int choise;
+		cin >> choise;
+		if (choise == 1)
+		{
+			flag = true;
+		}
+		else
+		{
+			flag = false;
+		}
+
+	} while (flag);
 
 	return 0;
 }
